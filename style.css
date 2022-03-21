@@ -14,7 +14,7 @@ body {
 }
 .section-one a {
   color: #5878bc;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-decoration: none;
 }
 
@@ -49,7 +49,7 @@ body {
 .social ul li {
   list-style-type: none;
   display: inline-block;
-  padding: 15px;
+  padding: 25px;
 }
 .social span {
   margin-left: 10px;
