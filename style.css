@@ -6,8 +6,7 @@ body {
 }
 
 .section-one {
-  padding: 5%;
-  margin-bottom: 20px;
+  padding: 3% 7%;
 }
 .section-one img {
   width: 7rem;
@@ -38,7 +37,7 @@ body {
   font-weight: bold;
 }
 .section-three img {
-  width: 50%;
+  width: 65%;
 }
 
 .social {
@@ -59,7 +58,21 @@ body {
 }
 
 @media (max-width: 600px) {
+  .section-one {
+    padding: 8%;
+    margin-bottom: 20px;
+  }
+  .section-one img {
+    width: 6rem;
+  }
+  .section-one a {
+    color: #5878bc;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
   .social ul li {
     display: block;
+    padding: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
