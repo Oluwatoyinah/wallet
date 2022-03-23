@@ -1,19 +1,19 @@
 
   
-.center2 {
+.center3 {
   position:absolute;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
 }
-.popup2 {
+.popup3 {
   min-width:50vw;
   max-width: 75vw;
   min-height:50vh;
   max-height: 90vh;
   padding:40px 60px;
   background:#f5f5f5;
-  /* border-radius:10px; */
+  border-radius:50px;
   box-sizing:border-box;
   z-index:2;
   text-align:center;
@@ -25,29 +25,29 @@
               top 1000ms ease-in-out,
               transform 1000ms ease-in-out;
 }
-.popup2.active {
+.popup3.active {
   opacity:1;
   top:50%;
   transform:translate(-50%,-50%) scale(1);
   transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
 }
-.popup2 .icon2 {
+.popup3 .icon3 {
   margin:20px 30px;
   display: flex;
 }
 
-.popup2 .title2 {
+.popup3 .title3 {
   margin:5px 0px;
   font-weight:600;
   text-align: center;
 }
-.popup2 .description2 {
+.popup3 .description3 {
   color:#222;
   font-size:15px;
   padding:5px;
 }
 
-.description2 input[type=text] {
+.description3 input[type=text] {
   border-radius: none;
 }
 
@@ -58,17 +58,17 @@
   color: white;
 }
 
-.description2 p {
+.description3 p {
   font-size: 13px;
   padding:10px;
   width: 100%;
   text-align: center;
 }
-.popup2 .dismiss-btn2 {
+.popup3 .dismiss-btn3 {
   margin-top:15px;
   clear: left;
 }
-.popup2 .dismiss-btn2 button {
+.popup3 .dismiss-btn3 button {
   padding:7px 15px;
   background: red;
   color:#f5f5f5;
@@ -80,29 +80,29 @@
   cursor:pointer;
   transition: all 300ms ease-in-out;
 }
-.popup2 .dismiss-btn2 button:hover {
+.popup3 .dismiss-btn3 button:hover {
   color:#111;
   background:#f5f5f5;
 }
-.popup2 > div {
+.popup3 > div {
   position:relative;
   top:10px;
   opacity:0;
 }
-.popup2.active > div {
+.popup3.active > div {
   top:0px;
   opacity:1;
 }
-.popup2.active .icon2 {
+.popup3.active .icon3 {
   transition: all 300ms ease-in-out 250ms;
 }
-.popup2.active .title2 {
+.popup3.active .title3 {
   transition: all 300ms ease-in-out 300ms;
 }
-.popup2.active .description2 {
+.popup3.active .description3 {
   transition: all 300ms ease-in-out 350ms;
 }
-.popup2.active .dismiss-btn2 {
+.popup3.active .dismiss-btn3 {
   transition: all 300ms ease-in-out 400ms;
 }
 
@@ -122,7 +122,7 @@
 
 
 
-  .popup2 {
+  .popup3 {
   min-width:90vw;
   max-width: 95vw;
   min-height:60vh;
@@ -132,19 +132,19 @@
  
   }
 
-  .popup2 .title2 {
+  .popup3 .title3 {
   margin:5px 0px;
   font-size:15px;
   font-weight:600;
 }
-.popup2 .description2 {
+.popup3 .description3 {
   color:#222;
   font-size:12px;
   padding:3px;
 
 }
 
-.popup2 .description2 p{
+.popup3 .description3 p{
   color:#222;
   font-size:13px;
   padding:10px;
@@ -152,7 +152,7 @@
   text-align: center;
 }
 
-.popup2 .dismiss-btn2 button {
+.popup3 .dismiss-btn3 button {
   padding:3px 8px;
   background:red;
   color:white;
@@ -166,7 +166,7 @@
   margin-bottom: 10px;
 }
 
-.description2 textarea {
+.description3 textarea {
   width: 100%;
  
 }
@@ -180,50 +180,29 @@
 
 
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+#qrcode svg {
+  width: 60%;
 }
 
-.diff2.active {
-  /* background-color: blue; */
-  border-bottom: 2px solid blue;
-} 
-
-.modal.active {
-  display: block;
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
+.wallets a {
+  text-decoration: none;
+  color: #424952;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+
+.diff {
+  margin: auto 10px;
+}
+
+.diff.active {
+  background-color :white;
+  border-radius: 10px;
+  padding: auto 15px;
+}
+
+.wallet-nav {
+  background: #ccc;
+  padding: 5px;
+  border-radius: 10px;
 }
