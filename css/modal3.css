@@ -192,17 +192,17 @@
 
 
 .diff {
-  margin: auto 10px;
+  margin: 2px;
 }
 
 .diff.active {
   background-color :white;
-  border-radius: 10px;
-  padding: auto 15px;
+  border-radius: 30px;
+  padding: auto 0;
 }
 
 .wallet-nav {
   background: #ccc;
-  padding: 5px;
-  border-radius: 10px;
+  padding: auto 15px;
+  border-radius: 30px;
 }
