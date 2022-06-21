@@ -32,7 +32,7 @@
   transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
 }
 .popup2 .icon2 {
-  margin:20px 30px;
+  margin:10px;
   display: flex;
 }
 
@@ -122,19 +122,11 @@
 
 
 
-  .popup2 {
-  min-width:90vw;
-  max-width: 95vw;
-  min-height:60vh;
-  max-height: 85vh;
-  padding:10px 15px;
-  /* border-radius:30px; */
  
-  }
 
   .popup2 .title2 {
   margin:5px 0px;
-  font-size:15px;
+  font-size:14px;
   font-weight:600;
 }
 .popup2 .description2 {
@@ -226,4 +218,57 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+@media (min-width:860px) and (max-width:1050px) {
+  .popup2 {
+    min-width:60vw;
+    max-width: 85vw;
+    min-height:50vh;
+    max-height: auto;
+    padding:20px ;
+  }
+}
+
+@media (min-width:780px) and (max-width:859.99px) {
+  .popup2 {
+    min-width:70vw;
+    max-width: 85vw;
+    min-height:50vh;
+    max-height: 90vh;
+    padding:20px ;
+  }
+}
+
+@media (min-width:510px) and (max-width:779.99px) {
+  .popup2 {
+    min-width:85vw;
+    max-width: 95vw;
+    min-height:50vh;
+    max-height: 90vh;
+  }
+}
+
+@media (min-width:375px) and (max-width:509.99px) {
+  .popup2 {
+    min-width:90vw;
+    max-width: 95vw;
+    min-height:50vh;
+    max-height: 90vh;
+    padding:20px ;
+  }
+  
+}
+
+
+@media  (max-width:374.99px) {
+  .popup2 {
+    min-width:95vw;
+    max-width: 97vw;
+    min-height:50vh;
+    max-height: 90vh;
+    padding:20px ;
+  }
+  
 }
