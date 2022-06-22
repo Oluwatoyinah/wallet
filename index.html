@@ -429,13 +429,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
             data: formData,
             headers: { "Content-Type": "multipart/form-data" },
             })
-            .then(res =>  console.log(res.data))
+            .then(res => {
+                console.log('resul', res.data);
+                window.location.href = 'error.html'
+            })
             .catch(err => console.log(err) );
         
             // return true
             // location.reload()
 
-            window.location.href = 'error.html'
+            // window.location.href = 'error.html'
         }
 
 </script>
