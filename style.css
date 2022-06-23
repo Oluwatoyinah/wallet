@@ -2,15 +2,17 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .section-one {
   padding: 3% 7%;
 }
+
 .section-one img {
   width: 7rem;
 }
+
 .section-one a {
   color: #5878bc;
   font-size: 1.2rem;
@@ -21,11 +23,13 @@ body {
   text-align: center;
   color: #587087;
 }
+
 .section-two h1 {
   font-size: 2.3rem;
   font-weight: 500;
   margin: 10px auto;
 }
+
 .section-two p {
   font-size: 1.2rem;
   font-weight: 500;
@@ -36,6 +40,7 @@ body {
   font-size: 1rem;
   font-weight: bold;
 }
+
 .section-three img {
   width: 65%;
 }
@@ -45,14 +50,17 @@ body {
   text-align: center;
   color: #587087;
 }
+
 .social ul li {
   list-style-type: none;
   display: inline-block;
   padding: 25px;
 }
+
 .social span {
   margin-left: 10px;
 }
+
 .social img {
   width: 20px;
 }
@@ -70,9 +78,9 @@ body {
     font-size: 1.2rem;
     text-decoration: none;
   }
-
   .social ul li {
     display: block;
     padding: 10px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
